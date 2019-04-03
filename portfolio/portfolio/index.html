@@ -1,0 +1,21 @@
+---
+layout: default
+title: Portfolio
+bodyID: whitewashed
+---
+<h1>Portfolio</h1>
+
+{% for project in site.posts %}
+	<div class="project-card">
+		<div class="left">
+			<h3><a href="{{ project.url }}">{{ project.title }}</a> <small>{{ project.date }}</small></h3>
+			<p>{{ project.excerpt }}</p>
+			<div align="center">
+				<a href="{{ project.url}}" class="button">More</a>
+			</div>
+		</div>
+		<div class="right">
+			<img src="{{ project.image }}" />
+		</div>
+	</div>
+{% endfor %}
